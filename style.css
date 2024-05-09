@@ -1,22 +1,54 @@
 *{
   margin: 0;
 }
-.main-box {
-  display: block;
-  /* background-color: antiquewhite; */
-  aspect-ratio: 16/9;
-  width: 800px;
+
+html {
+  font-family: monospace;
+}
+
+/* Submittal Form style */
+.forms-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  aspect-ratio: 16/3;
+  width: 250px;
   margin: auto;
   margin-top: 5%;
 }
 
+.forms-frame section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.forms-frame button {
+  margin: auto;
+  margin-top: 10%;
+  font-family: monospace;
+}
+
+/* setting main box that contains picasso */
+.main-box {
+  display: block;
+  /* background-color: antiquewhite; */
+  aspect-ratio: 16/9;
+  width: 400px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+/* frame that contains flex geometry */
 .main-frame {
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: space-evenly;
   /* background-color: aquamarine; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   height: 90%;
   width: 100%;
 }
@@ -33,12 +65,12 @@
 .bottom-box {
   width: 100%;
   height: 70%; 
-  /* background-color: coral; */
+  background-color: coral;
   margin-top: 2%;
 }
 
 .teal-box {
-  background-color: rgb(76, 202, 202);
+  background-color: rgb(61, 163, 163);
   color: teal;
   width: 32%;
   height: 100%;
@@ -62,39 +94,259 @@
   width: 100%;
 }
 
+/* circles general settings */
+.circle {
+  position: absolute;
+  border-radius: 100%; 
+}
+
+.ca {
+  background-color: coral;
+  width: 4%;
+  height: 8%;
+
+  top: 2%;
+  left: 5%;
+}
+
+.cb {
+  background-color: coral;
+  width: 4%;
+  height: 8%;
+
+  top: 23%;
+  left: 5%;
+}
+
+.cc {
+  background-color: gold;
+  width: 10%;
+  height: 20%;
+
+  top: 3%;
+  left: 18%;
+}
+
+.cd {
+  background-color: gold;
+  width: 4%;
+  height: 8%;
+
+  top: 40%;
+  left: 18%;
+}
+
+.ce {
+  background-color: coral;
+  width: 4%;
+  height: 8%;
+
+  top: 6%;
+  left: 40%;
+}
+
+.cf {
+  background-color: coral;
+  width: 10%;
+  height: 20%;
+
+  top: 23%;
+  left: 28%;
+}
+
+/* style for people */
+.people-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 100%;
+  /* border: 1px solid gold; */
+  z-index: +1;
+}
+
+.people {
+  display: inline-block;
+  width: 10%;
+  height: 20%;
+  /* background-color: aquamarine; */
+  /* border: 1px solid black; */
+}
+
+.pa {
+  background-image: url(img/accessibility_new_24dp_FILL0_wght400_GRAD0_opsz24\ \(1\).png);
+  background-position: 50%;
+  background-size: 200%;
+}
+
+.pb {
+  background-image: url(img/accessibility_new_24dp_FILL0_wght400_GRAD0_opsz24.png);
+  background-position: 50%;
+  background-size: 200%;
+}
+
+
+/* tree styles */
 .tree-box {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 50%;
-  height: 80%;
-  border: 1px solid gold;
+  height: 100%;
+  /* border: 1px solid gold; */
 }
 
 .tree-box > section {
   position: relative;
   height: 100%;
   width: 100%;
+  /* background-color: brown; */
+}
+
+/* coudln't find way to make this as a relative unit */
+.tri-l {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+  /* divide width by 5 */
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+
+  /* 1/2 width - 10% */
+  border-bottom: 160px solid green;
 }
 
 .tri-r {
   position: absolute;
-}
-
-/* .triangle {
-  position: absolute;
+  right: 0;
+  bottom: 0;
 
   width: 0;
   height: 0;
+  /* divide width by 8 */
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-
-  border-bottom: 50px solid green;
+  
+  /* 1/4 width */
+  border-bottom: 100px solid rgb(156, 226, 106);
 }
 
-@media (max-width: 700px) {
+/* different screen sizes */
+@media (min-width: 800px) {
   .main-box {
-    width: 600px;
+    width: 1000px;
     margin: auto;
   }
-} */
+
+    /* coudln't find way to make this as a relative unit */
+  .tri-l {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 5 */
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+  
+      /* 1/2 width - 10% */
+      border-bottom: 400px solid green;
+  }
+  
+  .tri-r {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 8 */
+      border-left: 125px solid transparent;
+      border-right: 125px solid transparent;
+      
+      /* 1/4 width */
+      border-bottom: 250px solid rgb(156, 226, 106);
+  }
+}
+@media (min-width: 1024px) {
+  .main-box {
+    width: 1000px;
+    margin: auto;
+  }
+
+    /* coudln't find way to make this as a relative unit */
+  .tri-l {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 5 */
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+  
+      /* 1/2 width - 10% */
+      border-bottom: 400px solid green;
+  }
+  
+  .tri-r {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 8 */
+      border-left: 125px solid transparent;
+      border-right: 125px solid transparent;
+      
+      /* 1/4 width */
+      border-bottom: 250px solid rgb(156, 226, 106);
+  }
+}
+
+@media (min-width: 1680px) {
+  .main-box {
+    width: 1600px;
+    margin: auto;
+  }
+
+    /* coudln't find way to make this as a relative unit */
+  .tri-l {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 5 */
+      border-left: 320px solid transparent;
+      border-right: 320px solid transparent;
+  
+      /* 1/2 width - 10% */
+      border-bottom: 640px solid green;
+  }
+  
+  .tri-r {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 0;
+      /* divide width by 8 */
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      
+      /* 1/4 width */
+      border-bottom: 400px solid rgb(156, 226, 106);
+  }
+}
