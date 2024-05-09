@@ -3,7 +3,7 @@
 }
 .main-box {
   display: block;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   aspect-ratio: 16/9;
   width: 800px;
   margin: auto;
@@ -26,14 +26,15 @@
   justify-content: space-between;
   height: 30%;
   width: 100%;
-  background-color: yellow;
+  /* background-color: yellow; */
   align-items: center;
 }
 
 .bottom-box {
   width: 100%;
   height: 70%; 
-  background-color: coral;
+  /* background-color: coral; */
+  margin-top: 2%;
 }
 
 .teal-box {
@@ -48,17 +49,37 @@
   /* height: 100%; */
 }
 
-/* .base-box {
+.base-box {
   /* background-color: chartreuse; */
   height: 4%;
+  width: 100%;
   padding-top: 1%;
-} */
+}
 
-/* .green-box {
+.green-box {
   background-color: rgb(188, 233, 121);
   height: 80%;
   width: 100%;
-} */
+}
+
+.tree-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 80%;
+  border: 1px solid gold;
+}
+
+.tree-box > section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.tri-r {
+  position: absolute;
+}
 
 /* .triangle {
   position: absolute;
